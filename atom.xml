@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[I'm Viecks]]></title>
+  <link href="http://viecks.github.io/atom.xml" rel="self"/>
+  <link href="http://viecks.github.io/"/>
+  <updated>2014-05-13T17:01:21+08:00</updated>
+  <id>http://viecks.github.io/</id>
+  <author>
+    <name><![CDATA[viecks]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[暴力破解Alfred 2.3的Powerpack]]></title>
+    <link href="http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/"/>
+    <updated>2014-05-13T12:45:39+08:00</updated>
+    <id>http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack</id>
+    <content type="html"><![CDATA[<p><strong style="color: red">免责声明：本文所述仅限于学习和研究之目的，请勿用于任何商业用途。是否使用本文所述技术取决与您，由此造成的一切后果本人不承担任何责任。</strong></p>
+
+<p>今天收到了Alfred 2.3版本的AutoUpdate提醒。更新以后发现之前网上搜到的用于Alfred 2.x版本的破解补丁无法破解2.3版本了。没有办法，只能自己动手丰衣足食了……</p>
+
+<!--more-->
+
+<p>看下刚装完的Alfred 2.3，</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-4.png" alt="" /></p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-5.png" alt="" /></p>
+
+<p>果然残疾了……</p>
+
+<p>先尝试用之前的Patcher对2.3版本的Alfred打Patch：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-1.png" alt="" /></p>
+
+<p>擦，果然不Work了……</p>
+
+<p>打开Alfred看下程序结构（在Alfred 2.app上右键显示包内容）：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-2.png" alt="" /></p>
+
+<p>看到有<code>Alfred Framework</code>、<code>Growl</code>、<code>Alfred 2</code>三个可执行程序以及<code>Alfred Preferences.app</code>一个应用程序。</p>
+
+<p>再打开<code>Alfred Preferences.app</code>看看：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-3.png" alt="" /></p>
+
+<p>Ok，这里还有一个<code>Alfred Preferences</code>的可执行程序。</p>
+
+<p>祭出神器Hopper，先打开<code>Alfred Preferences</code>看看。</p>
+
+<p>先尝试找下提示需要注册Powerpack的字符串，在Strings里面搜索<code>Powerpack Required</code>:</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-6.png" alt="" /></p>
+
+<p>找到了3个相关的字符串，定位到第一个，然后看Cross References：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-7.png" alt="" /></p>
+
+<p>有个字符串类型的东西引用到它，再对这个字符串类型的东西做Cross References：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-8.png" alt="" /></p>
+
+<p>(⊙o⊙)哦，有个函数引用了这个字符串，我们进去看看……</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-9.png" alt="" /></p>
+
+<p>这里牛逼屌炸天的Hopper给我们提供了一个无比牛逼的功能，<code>Pseudo Code</code>，简单来说就是Hopper的HexRays，我们看下通过<code>Pseudo Code</code>得到的结果：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-10.png" alt="" /></p>
+
+<p>我擦，真的屌炸天，对于我等汇编苦手来说，简直就是圣母福音。</p>
+
+<p>不废话了，从这里看，很明显，Alfred调用了函数<code>isNgiw32TGS4363Aa</code>来判断用户是否购买了Powerpack，如果这个函数不返回<em>0x0</em>，则认为已经购买。</p>
+
+<p>看看这个函数的实现：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-11.png" alt="" /></p>
+
+<p>从代码上看，这里调用到得<code>isNgiw32TGS4363Aa</code>只是一个stub，真正的<code>isNgiw32TGS4363Aa</code>实现看来并不在这个可执行程序里。</p>
+
+<p>先关掉这个<code>Alfred Preferences</code>，看看其他的程序中是否有<code>isNgiw32TGS4363Aa</code>的实现。</p>
+
+<p>经过查找，发现<code>isNgiw32TGS4363Aa</code>是实现在<code>Alfred Framework</code>中的，我们用Hopper打开<code>Alfred Framework</code>，在Labels下面搜索<code>isNgiw32TGS4363Aa</code>：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-12.png" alt="" /></p>
+
+<p>Bingo，got it</p>
+
+<p>从代码上看，这个函数进一步调用了一个名为<code>isAgi23tAGIe35SG</code>的函数，并将这个函数的结果作为返回值返回给上层。</p>
+
+<p>有兴趣搞清楚Alfred判断Powerpack是否购买的流程的同学可以进一步看看<code>isAgi23tAGIe35SG</code>，不过对于我来说，到这一步已经够了，直接暴力修改这里的代码，使得这个函数永远返回<em>0x1</em>理论上就足够了。让我们搞搞试试：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-13.png" alt="" /></p>
+
+<p>修改完后，用Hopper的<code>Produce New Executable</code>保存修改后的<code>Alfred Framework</code>到桌面上。</p>
+
+<p>用修改后的<code>Alfred Framework</code>替换Alfred 2.app中的文件，我们来试试修改是否生效：</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-14.png" alt="" /></p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-17.png" alt="" /></p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140513-16.png" alt="" /></p>
+
+<p>貌似Work了……:D</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[使用JadClipse在Eclipse中反编译Android的Class文件]]></title>
+    <link href="http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/"/>
+    <updated>2014-05-09T16:09:27+08:00</updated>
+    <id>http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian</id>
+    <content type="html"><![CDATA[<p>今天在查找与Android反编译相关的资料时，发现了JAD和JadClipse。</p>
+
+<p>和JD-GUI相比，Jad+JadClipse的组合与Eclipse的集成更好，不仅在反编译其他App的时候很方便，而且可以很方便的查看类似于appcompat之类的private library的源码。</p>
+
+<p>这里记录一下怎么配置、安装JAD和JadClipse。</p>
+
+<!-- more -->
+
+<h4 id="jad">1、下载JAD</h4>
+
+<p><a href="http://varaneckas.com/jad/">下载</a>适用于自己系统的jad版本，下载后解压得到一个可执行文件。将可执行文件放到任意目录。</p>
+
+<h4 id="jadclipse">2、下载JadClipse</h4>
+
+<p><a href="http://sourceforge.net/projects/jadclipse/">下载</a>JadClipse，解压后得到<code>net.sf.jadclipse_3.3.0.jar</code>放到Eclipse的Plugins目录下。</p>
+
+<h4 id="jadclipse-1">3、配置JadClipse</h4>
+
+<p>启动Eclipse后，在<code>Preferences-&gt;Java</code>下，应该出现了一个<code>JadClipse</code>的设置项。</p>
+
+<p><img src="http://viecks.github.io/images/attaches/2014-05-09_04-49-46.png" alt="" /></p>
+
+<p>修改<code>Path to decompiler</code>为JAD可执行程序的路径。</p>
+
+<h4 id="class">4、修改class文件关联</h4>
+
+<p>在<code>Preferences-&gt;Editors-&gt;File Associations</code>中，找到<code>*.class</code>和<code>*.class without source</code>，将Associated editors的默认项设置为<code>JadClipse Class File Viewer</code>。</p>
+
+<p><img src="http://viecks.github.io/images/attaches/2014-05-09_04-56-26.png" alt="" /></p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140509-1.png" alt="" /></p>
+
+<p>经过以上配置后，如果没有意外的话，在Eclipse中查看class文件应该就可以看到反编译以后的源码了。</p>
+
+<p><img src="http://viecks.github.io/images/attaches/QQ20140509-2.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>

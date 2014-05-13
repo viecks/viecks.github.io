@@ -1,0 +1,250 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>暴力破解Alfred 2.3的Powerpack - I'm Viecks</title>
+	<meta name="author" content="viecks">
+
+	
+	<meta name="description" content="免责声明：本文所述仅限于学习和研究之目的，请勿用于任何商业用途。是否使用本文所述技术取决与您，由此造成的一切后果本人不承担任何责任。 今天收到了Alfred 2.3版本的AutoUpdate提醒。更新以后发现之前网上搜到的用于Alfred 2.x版本的破解补丁无法破解2.3版本了。没有办法， &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="I'm Viecks" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">I'm Viecks</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:viecks.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:viecks.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">暴力破解Alfred 2.3的Powerpack</h2>
+	<div class="entry-content"><p><strong style="color: red">免责声明：本文所述仅限于学习和研究之目的，请勿用于任何商业用途。是否使用本文所述技术取决与您，由此造成的一切后果本人不承担任何责任。</strong></p>
+
+<p>今天收到了Alfred 2.3版本的AutoUpdate提醒。更新以后发现之前网上搜到的用于Alfred 2.x版本的破解补丁无法破解2.3版本了。没有办法，只能自己动手丰衣足食了……</p>
+
+<!--more-->
+
+<p>看下刚装完的Alfred 2.3，</p>
+
+<p><img src="/images/attaches/QQ20140513-4.png" alt="" /></p>
+
+<p><img src="/images/attaches/QQ20140513-5.png" alt="" /></p>
+
+<p>果然残疾了……</p>
+
+<p>先尝试用之前的Patcher对2.3版本的Alfred打Patch：</p>
+
+<p><img src="/images/attaches/QQ20140513-1.png" alt="" /></p>
+
+<p>擦，果然不Work了……</p>
+
+<p>打开Alfred看下程序结构（在Alfred 2.app上右键显示包内容）：</p>
+
+<p><img src="/images/attaches/QQ20140513-2.png" alt="" /></p>
+
+<p>看到有<code>Alfred Framework</code>、<code>Growl</code>、<code>Alfred 2</code>三个可执行程序以及<code>Alfred Preferences.app</code>一个应用程序。</p>
+
+<p>再打开<code>Alfred Preferences.app</code>看看：</p>
+
+<p><img src="/images/attaches/QQ20140513-3.png" alt="" /></p>
+
+<p>Ok，这里还有一个<code>Alfred Preferences</code>的可执行程序。</p>
+
+<p>祭出神器Hopper，先打开<code>Alfred Preferences</code>看看。</p>
+
+<p>先尝试找下提示需要注册Powerpack的字符串，在Strings里面搜索<code>Powerpack Required</code>:</p>
+
+<p><img src="/images/attaches/QQ20140513-6.png" alt="" /></p>
+
+<p>找到了3个相关的字符串，定位到第一个，然后看Cross References：</p>
+
+<p><img src="/images/attaches/QQ20140513-7.png" alt="" /></p>
+
+<p>有个字符串类型的东西引用到它，再对这个字符串类型的东西做Cross References：</p>
+
+<p><img src="/images/attaches/QQ20140513-8.png" alt="" /></p>
+
+<p>(⊙o⊙)哦，有个函数引用了这个字符串，我们进去看看……</p>
+
+<p><img src="/images/attaches/QQ20140513-9.png" alt="" /></p>
+
+<p>这里牛逼屌炸天的Hopper给我们提供了一个无比牛逼的功能，<code>Pseudo Code</code>，简单来说就是Hopper的HexRays，我们看下通过<code>Pseudo Code</code>得到的结果：</p>
+
+<p><img src="/images/attaches/QQ20140513-10.png" alt="" /></p>
+
+<p>我擦，真的屌炸天，对于我等汇编苦手来说，简直就是圣母福音。</p>
+
+<p>不废话了，从这里看，很明显，Alfred调用了函数<code>isNgiw32TGS4363Aa</code>来判断用户是否购买了Powerpack，如果这个函数不返回<em>0x0</em>，则认为已经购买。</p>
+
+<p>看看这个函数的实现：</p>
+
+<p><img src="/images/attaches/QQ20140513-11.png" alt="" /></p>
+
+<p>从代码上看，这里调用到得<code>isNgiw32TGS4363Aa</code>只是一个stub，真正的<code>isNgiw32TGS4363Aa</code>实现看来并不在这个可执行程序里。</p>
+
+<p>先关掉这个<code>Alfred Preferences</code>，看看其他的程序中是否有<code>isNgiw32TGS4363Aa</code>的实现。</p>
+
+<p>经过查找，发现<code>isNgiw32TGS4363Aa</code>是实现在<code>Alfred Framework</code>中的，我们用Hopper打开<code>Alfred Framework</code>，在Labels下面搜索<code>isNgiw32TGS4363Aa</code>：</p>
+
+<p><img src="/images/attaches/QQ20140513-12.png" alt="" /></p>
+
+<p>Bingo，got it</p>
+
+<p>从代码上看，这个函数进一步调用了一个名为<code>isAgi23tAGIe35SG</code>的函数，并将这个函数的结果作为返回值返回给上层。</p>
+
+<p>有兴趣搞清楚Alfred判断Powerpack是否购买的流程的同学可以进一步看看<code>isAgi23tAGIe35SG</code>，不过对于我来说，到这一步已经够了，直接暴力修改这里的代码，使得这个函数永远返回<em>0x1</em>理论上就足够了。让我们搞搞试试：</p>
+
+<p><img src="/images/attaches/QQ20140513-13.png" alt="" /></p>
+
+<p>修改完后，用Hopper的<code>Produce New Executable</code>保存修改后的<code>Alfred Framework</code>到桌面上。</p>
+
+<p>用修改后的<code>Alfred Framework</code>替换Alfred 2.app中的文件，我们来试试修改是否生效：</p>
+
+<p><img src="/images/attaches/QQ20140513-14.png" alt="" /></p>
+
+<p><img src="/images/attaches/QQ20140513-17.png" alt="" /></p>
+
+<p><img src="/images/attaches/QQ20140513-16.png" alt="" /></p>
+
+<p>貌似Work了……:D</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-13T12:45:39+08:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/alfred/'>Alfred,</a>, <a class='category' href='/blog/categories/po-jie/'>破解</a>
+
+
+</div>
+	
+	<div class="comments"><a href="#disqus_thread">Comments</a></div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+<section id="comment">
+    <h2 class="title">Comments</h2>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    viecks
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'viecks';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/';
+        var disqus_url = 'http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//go.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+</body>
+</html>

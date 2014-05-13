@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JAD | I'm Viecks]]></title>
+  <link href="http://viecks.github.io/blog/categories/jad/atom.xml" rel="self"/>
+  <link href="http://viecks.github.io/"/>
+  <updated>2014-05-13T17:01:21+08:00</updated>
+  <id>http://viecks.github.io/</id>
+  <author>
+    <name><![CDATA[viecks]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[使用JadClipse在Eclipse中反编译Android的Class文件]]></title>
+    <link href="http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/"/>
+    <updated>2014-05-09T16:09:27+08:00</updated>
+    <id>http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian</id>
+    <content type="html"><![CDATA[<p>今天在查找与Android反编译相关的资料时，发现了JAD和JadClipse。</p>
+
+<p>和JD-GUI相比，Jad+JadClipse的组合与Eclipse的集成更好，不仅在反编译其他App的时候很方便，而且可以很方便的查看类似于appcompat之类的private library的源码。</p>
+
+<p>这里记录一下怎么配置、安装JAD和JadClipse。</p>
+
+<!-- more -->
+
+<h4 id="jad">1、下载JAD</h4>
+
+<p><a href="http://varaneckas.com/jad/">下载</a>适用于自己系统的jad版本，下载后解压得到一个可执行文件。将可执行文件放到任意目录。</p>
+
+<h4 id="jadclipse">2、下载JadClipse</h4>
+
+<p><a href="http://sourceforge.net/projects/jadclipse/">下载</a>JadClipse，解压后得到<code>net.sf.jadclipse_3.3.0.jar</code>放到Eclipse的Plugins目录下。</p>
+
+<h4 id="jadclipse-1">3、配置JadClipse</h4>
+
+<p>启动Eclipse后，在<code>Preferences-&gt;Java</code>下，应该出现了一个<code>JadClipse</code>的设置项。</p>
+
+<p><img src="/images/attaches/2014-05-09_04-49-46.png" alt="" /></p>
+
+<p>修改<code>Path to decompiler</code>为JAD可执行程序的路径。</p>
+
+<h4 id="class">4、修改class文件关联</h4>
+
+<p>在<code>Preferences-&gt;Editors-&gt;File Associations</code>中，找到<code>*.class</code>和<code>*.class without source</code>，将Associated editors的默认项设置为<code>JadClipse Class File Viewer</code>。</p>
+
+<p><img src="/images/attaches/2014-05-09_04-56-26.png" alt="" /></p>
+
+<p><img src="/images/attaches/QQ20140509-1.png" alt="" /></p>
+
+<p>经过以上配置后，如果没有意外的话，在Eclipse中查看class文件应该就可以看到反编译以后的源码了。</p>
+
+<p><img src="/images/attaches/QQ20140509-2.png" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>
