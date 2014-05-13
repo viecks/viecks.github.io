@@ -83,27 +83,27 @@
 
 <p>看下刚装完的Alfred 2.3，</p>
 
-<p><img src="/images/attaches/QQ20140513-4.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-4.png" alt="" /></p>
 
-<p><img src="/images/attaches/QQ20140513-5.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-5.png" alt="" /></p>
 
 <p>果然残疾了……</p>
 
 <p>先尝试用之前的Patcher对2.3版本的Alfred打Patch：</p>
 
-<p><img src="/images/attaches/QQ20140513-1.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-1.png" alt="" /></p>
 
 <p>擦，果然不Work了……</p>
 
 <p>打开Alfred看下程序结构（在Alfred 2.app上右键显示包内容）：</p>
 
-<p><img src="/images/attaches/QQ20140513-2.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-2.png" alt="" /></p>
 
 <p>看到有<code>Alfred Framework</code>、<code>Growl</code>、<code>Alfred 2</code>三个可执行程序以及<code>Alfred Preferences.app</code>一个应用程序。</p>
 
 <p>再打开<code>Alfred Preferences.app</code>看看：</p>
 
-<p><img src="/images/attaches/QQ20140513-3.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-3.png" alt="" /></p>
 
 <p>Ok，这里还有一个<code>Alfred Preferences</code>的可执行程序。</p>
 
@@ -111,23 +111,23 @@
 
 <p>先尝试找下提示需要注册Powerpack的字符串，在Strings里面搜索<code>Powerpack Required</code>:</p>
 
-<p><img src="/images/attaches/QQ20140513-6.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-6.png" alt="" /></p>
 
 <p>找到了3个相关的字符串，定位到第一个，然后看Cross References：</p>
 
-<p><img src="/images/attaches/QQ20140513-7.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-7.png" alt="" /></p>
 
 <p>有个字符串类型的东西引用到它，再对这个字符串类型的东西做Cross References：</p>
 
-<p><img src="/images/attaches/QQ20140513-8.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-8.png" alt="" /></p>
 
 <p>(⊙o⊙)哦，有个函数引用了这个字符串，我们进去看看……</p>
 
-<p><img src="/images/attaches/QQ20140513-9.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-9.png" alt="" /></p>
 
 <p>这里牛逼屌炸天的Hopper给我们提供了一个无比牛逼的功能，<code>Pseudo Code</code>，简单来说就是Hopper的HexRays，我们看下通过<code>Pseudo Code</code>得到的结果：</p>
 
-<p><img src="/images/attaches/QQ20140513-10.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-10.png" alt="" /></p>
 
 <p>我擦，真的屌炸天，对于我等汇编苦手来说，简直就是圣母福音。</p>
 
@@ -135,7 +135,7 @@
 
 <p>看看这个函数的实现：</p>
 
-<p><img src="/images/attaches/QQ20140513-11.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-11.png" alt="" /></p>
 
 <p>从代码上看，这里调用到得<code>isNgiw32TGS4363Aa</code>只是一个stub，真正的<code>isNgiw32TGS4363Aa</code>实现看来并不在这个可执行程序里。</p>
 
@@ -143,7 +143,7 @@
 
 <p>经过查找，发现<code>isNgiw32TGS4363Aa</code>是实现在<code>Alfred Framework</code>中的，我们用Hopper打开<code>Alfred Framework</code>，在Labels下面搜索<code>isNgiw32TGS4363Aa</code>：</p>
 
-<p><img src="/images/attaches/QQ20140513-12.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-12.png" alt="" /></p>
 
 <p>Bingo，got it</p>
 
@@ -151,17 +151,17 @@
 
 <p>有兴趣搞清楚Alfred判断Powerpack是否购买的流程的同学可以进一步看看<code>isAgi23tAGIe35SG</code>，不过对于我来说，到这一步已经够了，直接暴力修改这里的代码，使得这个函数永远返回<em>0x1</em>理论上就足够了。让我们搞搞试试：</p>
 
-<p><img src="/images/attaches/QQ20140513-13.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-13.png" alt="" /></p>
 
 <p>修改完后，用Hopper的<code>Produce New Executable</code>保存修改后的<code>Alfred Framework</code>到桌面上。</p>
 
 <p>用修改后的<code>Alfred Framework</code>替换Alfred 2.app中的文件，我们来试试修改是否生效：</p>
 
-<p><img src="/images/attaches/QQ20140513-14.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-14.png" alt="" /></p>
 
-<p><img src="/images/attaches/QQ20140513-17.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-17.png" alt="" /></p>
 
-<p><img src="/images/attaches/QQ20140513-16.png" alt="" /></p>
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/QQ20140513-16.png" alt="" /></p>
 
 <p>貌似Work了……:D</p>
 </div>
