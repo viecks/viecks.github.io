@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: markdown | I'm Viecks]]></title>
+  <link href="http://viecks.github.io/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://viecks.github.io/"/>
+  <updated>2014-05-15T15:22:16+08:00</updated>
+  <id>http://viecks.github.io/</id>
+  <author>
+    <name><![CDATA[viecks]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[让Slideshow也Markdown起来的Deckset]]></title>
+    <link href="http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/"/>
+    <updated>2014-05-15T14:33:48+08:00</updated>
+    <id>http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset</id>
+    <content type="html"><![CDATA[<p>由于工作的原因，经常需要写一些会议或者讲座使用的PPT，最近开始尝试使用Deckset做大部分用到的演示PPT，感觉还不错。</p>
+
+<p>Deckset是干什么用的呢？套用其官网的一句话：</p>
+
+<blockquote>
+  <p>Great-looking slides from simple Markdown files Write down your thoughts in your favourite text editor, and Deckset will turn them into beautiful presentations.</p>
+</blockquote>
+
+<p>简单说，Deckset就是Markdown-&gt;Slides的一个Render程序，那么Deckset提供了哪些不同于传统PPT（如Powerpoint、Keynote等）软件的特性呢？</p>
+
+<!--more-->
+
+<p>打开Deckset以后，我们首先看到了下面的界面：</p>
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/31d3537258cdf1733b0930c55c25467a.png" alt="" /></p>
+
+<p>这里，Deckset提供了3个展示不同特点的Examples来帮助人们尽快熟悉Deckset的使用，我们双击第一个<em>“Deckset basics”</em>看下Deckset的基本特性。</p>
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/f5631f0314455af3f48fc00211f353a2.png" alt="" /></p>
+
+<p>打开“Deckset basics”以后，我们看到，首先“Deckset basics”这个slide是由“Deckset basics.md”这个Markdown文件描述的，我们点击上方的<code>Edit</code>按钮看下这个Markdown文件。</p>
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/d6c599e535cb54ddfbbf616973aa8b7c.png" alt="" /></p>
+
+<p>Deckset本身并没有提供Markdown的编辑功能，而是将编辑功能交给了用户系统上已经安装的Markdown编辑程序或字处理程序。</p>
+
+<p>关掉Mou，回过头来看Deckset提供的这个Example，我们可以有重点的看下Deckset提供的一些最吸引我个人特性：</p>
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/77c62e2aa9e6b6d6cc6a83e5579128a0.png" alt="" /></p>
+
+<p><em>Deckset基于标准的Markdown语法来写slide，意味着我们可以享受到所有Markdown的优势</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/62197b021d63cb4c88358ba422db0589.png" alt="" /></p>
+
+<p><em>Deckset支持代码的语法高亮，对于我这种程序狗来说，这个应该是最吸引我的一点了，:D</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/5a8ea27256898684d188d8576eba9d96.png" alt="" /></p>
+
+<p><em>Deckset中使用的图片支持模糊过滤的效果，使得浮在图片上的文字可以看得更清晰</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/de9d89954406e5264682257ef771e662.png" alt="" /></p>
+
+<p><em>当然，简单的图文混排也不是问题</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/21070d9d1e379b7408cea93e6e67e96c.png" alt="" /></p>
+
+<p><em>恩，嵌入一个视频也是可以滴</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/ec338aa03f9a2f5ed5223486d59a353d.png" alt="" /></p>
+
+<p><em>Speaker notes的支持也有，虽然还有些薄弱</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/467de6ec4d450e4eac55eeb939789142.png" alt="" /></p>
+
+<p><em>多套主题可以随意选用，而且由于基于Markdown，样式与内容是完全分开的，也就是说我们即使写完了slide，也可以随意调整主题风格</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/fdf0d37b12365876fb6d143c0c68f4aa.png" alt="" /></p>
+
+<p><em>主题修改后，图片的过滤效果也会跟着改变以适应该主题</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/6eb2a2eeac254ab3776b08392ab249dc.png" alt="" /></p>
+
+<p><em>如果担心Markdown写的slide不好转给其他童鞋的话，我们还可以导出PDF格式的slide</em></p>
+
+<hr />
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/38a65c6c88f72a289411f16e9cc98591.png" alt="" /></p>
+
+<p><em>这是导出后的PDF文件，格式得到了完美的保留（虽然视频没法播放了……）</em></p>
+
+<hr />
+
+<p>以上基本上列出了Deckset的一些比较吸引人的特性，当然，目前阶段Deckset也有一些不足，</p>
+
+<ul>
+  <li>只能使用官方提供的Theme，没有自定义Theme的功能；</li>
+  <li>没有提供任何动画效果；</li>
+  <li>Speaker Note功能比较薄弱；</li>
+  <li>导出功能只能导出PDF，要是支持PPT和keynote的格式就更好了；</li>
+</ul>
+
+<p>不过瑕不掩瑜，对于大部分时候我用到的功能，Deckset都已经做得不错了，尤其是<em>代码语法高亮</em>，大爱呀，希望后续Deckset可以越做越好，也希望喜欢这款软件的同学可以去支持一下正版。</p>
+]]></content>
+  </entry>
+  
+</feed>
