@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | I'm Viecks]]></title>
   <link href="http://viecks.info/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://viecks.info/"/>
-  <updated>2014-05-19T16:29:48+08:00</updated>
+  <updated>2014-05-19T16:52:56+08:00</updated>
   <id>http://viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[全新环境下拉取octopress源码重新generate后部署到github时git push报错的解决方法]]></title>
+    <link href="http://viecks.info/blog/2014/05/19/quan-xin-huan-jing-xia-la-qu-octopressyuan-ma-zhong-xin-generatehou-bu-shu-dao-githubshi-git-pushbao-cuo-de-jie-jue-fang-fa/"/>
+    <updated>2014-05-19T16:40:48+08:00</updated>
+    <id>http://viecks.info/blog/2014/05/19/quan-xin-huan-jing-xia-la-qu-octopressyuan-ma-zhong-xin-generatehou-bu-shu-dao-githubshi-git-pushbao-cuo-de-jie-jue-fang-fa</id>
+    <content type="html"><![CDATA[<p>今天在另外一台机器上从github拉取blog的源码，执行<code>rake setup_github_pages</code>，编译并使用<code>rake deploy</code>部署时出错，错误信息为：</p>
+
+<p><code>bash
+## Pushing generated _deploy website
+To git@github.com:viecks/viecks.github.io.git
+ ! [rejected]        master -&gt; master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:viecks/viecks.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></p>
+
+<!--more-->
+
+<p>从错误信息看，应该是本地数据太旧了，按说pull一次再push就可以了，但是<code>git pull</code>后提示内容已经是最新的了：</p>
+
+<p><code>bash
+Already up-to-date.
+</code></p>
+
+<p><code>git pull</code>之后重新<code>rake deploy</code>错误依旧。</p>
+
+<p>尝试用<code>git push -f</code>强制push覆盖也没生效。</p>
+
+<p>后来不使用<code>rake setup_github_pages</code>，直接调用git命令生成_deploy目录后问题解决：</p>
+
+<p><code>bash
+mkdir _deploy
+cd _deploy
+git init
+git remote add -t master -f origin git@github.com:viecks/viecks.github.io.git
+rake deploy
+</code></p>
+
+<p>具体原因不明，有明白的同学可以给我讲讲……</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[简化静态博客发图的Alfred工作流]]></title>
