@@ -2,44 +2,40 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/
+            http://viecks.info/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/
+        </loc>
+        <lastmod>2014-05-19T15:53:03+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/</loc>
+        <lastmod>2014-05-19T15:53:03+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su/
         </loc>
         <lastmod>2014-05-19T15:53:03+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/
+            http://viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu/
         </loc>
         <lastmod>2014-05-19T15:53:03+08:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://viecks.github.io/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su/
-        </loc>
+        <loc>http://viecks.info/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/</loc>
         <lastmod>2014-05-19T15:53:03+08:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://viecks.github.io/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu/
-        </loc>
+        <loc>http://viecks.info/blog/archives/</loc>
         <lastmod>2014-05-19T15:53:03+08:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/
-        </loc>
+        <loc>http://viecks.info/</loc>
         <lastmod>2014-05-19T15:53:03+08:00</lastmod>
     </url>
     <url>
-        <loc>http://viecks.github.io/blog/archives/</loc>
-        <lastmod>2014-05-19T15:53:03+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://viecks.github.io/</loc>
-        <lastmod>2014-05-19T15:53:03+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://viecks.github.io/robots.txt</loc>
+        <loc>http://viecks.info/robots.txt</loc>
         <lastmod>2014-05-19T15:53:03+08:00</lastmod>
     </url>
 </urlset>

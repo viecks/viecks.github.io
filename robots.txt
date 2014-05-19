@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://viecks.github.io/sitemap.xml 
+Sitemap: http://viecks.info/sitemap.xml 

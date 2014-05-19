@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: markdown | I'm Viecks]]></title>
-  <link href="http://viecks.github.io/blog/categories/markdown/atom.xml" rel="self"/>
-  <link href="http://viecks.github.io/"/>
-  <updated>2014-05-19T15:53:18+08:00</updated>
-  <id>http://viecks.github.io/</id>
+  <link href="http://viecks.info/blog/categories/markdown/atom.xml" rel="self"/>
+  <link href="http://viecks.info/"/>
+  <updated>2014-05-19T16:29:48+08:00</updated>
+  <id>http://viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[让Slideshow也Markdown起来的Deckset]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/"/>
+    <link href="http://viecks.info/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/"/>
     <updated>2014-05-15T14:33:48+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset</id>
+    <id>http://viecks.info/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset</id>
     <content type="html"><![CDATA[<p>由于工作的原因，经常需要写一些会议或者讲座使用的PPT，最近开始尝试使用Deckset做大部分用到的演示PPT，感觉还不错。</p>
 
 <p>Deckset是干什么用的呢？套用其官网的一句话：</p>

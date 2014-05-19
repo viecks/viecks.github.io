@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[I'm Viecks]]></title>
-  <link href="http://viecks.github.io/atom.xml" rel="self"/>
-  <link href="http://viecks.github.io/"/>
-  <updated>2014-05-19T15:53:18+08:00</updated>
-  <id>http://viecks.github.io/</id>
+  <link href="http://viecks.info/atom.xml" rel="self"/>
+  <link href="http://viecks.info/"/>
+  <updated>2014-05-19T16:29:48+08:00</updated>
+  <id>http://viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[让Slideshow也Markdown起来的Deckset]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/"/>
+    <link href="http://viecks.info/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset/"/>
     <updated>2014-05-15T14:33:48+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset</id>
+    <id>http://viecks.info/blog/2014/05/15/rang-slideshowye-markdownqi-lai-de-deckset</id>
     <content type="html"><![CDATA[<p>由于工作的原因，经常需要写一些会议或者讲座使用的PPT，最近开始尝试使用Deckset做大部分用到的演示PPT，感觉还不错。</p>
 
 <p>Deckset是干什么用的呢？套用其官网的一句话：</p>
@@ -101,9 +101,9 @@
   
   <entry>
     <title type="html"><![CDATA[简化静态博客发图的Alfred工作流]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu/"/>
+    <link href="http://viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu/"/>
     <updated>2014-05-13T19:16:40+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu</id>
+    <id>http://viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu</id>
     <content type="html"><![CDATA[<p>今天把自己的blog迁到了github上，为了解决图片加载慢的问题又用了qiniudn做图床加速。没想到用力太猛，贴图比之前更麻烦了。。。没办法，用Alfred写了个Workflow，一劳永逸的解决贴图的问题吧……</p>
 
 <!--more-->
@@ -253,9 +253,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用七牛为托管在github上面的静态博客加速]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su/"/>
+    <link href="http://viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su/"/>
     <updated>2014-05-13T19:01:05+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su</id>
+    <id>http://viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su</id>
     <content type="html"><![CDATA[<p>今天折腾了一下，把Blog的存储空间从七牛挪到github了。折腾的原因主要是七牛使用自定义域名太糟心了，各种备案各种麻烦。</p>
 
 <p>迁移的过程很简单，在七牛托管时候用qrsync做deploy，切换到github以后直接用rake deploy搞定。</p>
@@ -292,9 +292,9 @@
   
   <entry>
     <title type="html"><![CDATA[暴力破解Alfred 2.3的Powerpack]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/"/>
+    <link href="http://viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/"/>
     <updated>2014-05-13T12:45:39+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack</id>
+    <id>http://viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack</id>
     <content type="html"><![CDATA[<p><strong style="color: red">免责声明：本文所述仅限于学习和研究之目的，请勿用于任何商业用途。是否使用本文所述技术取决与您，由此造成的一切后果本人不承担任何责任。</strong></p>
 
 <p>今天收到了Alfred 2.3版本的AutoUpdate提醒。更新以后发现之前网上搜到的用于Alfred 2.x版本的破解补丁无法破解2.3版本了。没有办法，只能自己动手丰衣足食了……</p>
@@ -389,9 +389,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用JadClipse在Eclipse中反编译Android的Class文件]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/"/>
+    <link href="http://viecks.info/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/"/>
     <updated>2014-05-09T16:09:27+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian</id>
+    <id>http://viecks.info/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian</id>
     <content type="html"><![CDATA[<p>今天在查找与Android反编译相关的资料时，发现了JAD和JadClipse。</p>
 
 <p>和JD-GUI相比，Jad+JadClipse的组合与Eclipse的集成更好，不仅在反编译其他App的时候很方便，而且可以很方便的查看类似于appcompat之类的private library的源码。</p>

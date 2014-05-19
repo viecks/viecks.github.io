@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Android | I'm Viecks]]></title>
-  <link href="http://viecks.github.io/blog/categories/android/atom.xml" rel="self"/>
-  <link href="http://viecks.github.io/"/>
-  <updated>2014-05-19T15:53:18+08:00</updated>
-  <id>http://viecks.github.io/</id>
+  <link href="http://viecks.info/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://viecks.info/"/>
+  <updated>2014-05-19T16:29:48+08:00</updated>
+  <id>http://viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用JadClipse在Eclipse中反编译Android的Class文件]]></title>
-    <link href="http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/"/>
+    <link href="http://viecks.info/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian/"/>
     <updated>2014-05-09T16:09:27+08:00</updated>
-    <id>http://viecks.github.io/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian</id>
+    <id>http://viecks.info/blog/2014/05/09/shi-yong-jadclipsezai-eclipsezhong-fan-bian-yi-androidde-classwen-jian</id>
     <content type="html"><![CDATA[<p>今天在查找与Android反编译相关的资料时，发现了JAD和JadClipse。</p>
 
 <p>和JD-GUI相比，Jad+JadClipse的组合与Eclipse的集成更好，不仅在反编译其他App的时候很方便，而且可以很方便的查看类似于appcompat之类的private library的源码。</p>
