@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Viecks]]></title>
   <link href="http://viecks.info/atom.xml" rel="self"/>
   <link href="http://viecks.info/"/>
-  <updated>2014-05-21T18:53:02+08:00</updated>
+  <updated>2014-05-26T19:28:11+08:00</updated>
   <id>http://viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[一个百度百家的RSS生成器]]></title>
+    <link href="http://viecks.info/blog/2014/05/26/%5B%3F%5D-ge-bai-du-bai-jia-de-rsssheng-cheng-qi/"/>
+    <updated>2014-05-26T19:13:58+08:00</updated>
+    <id>http://viecks.info/blog/2014/05/26/[?]-ge-bai-du-bai-jia-de-rsssheng-cheng-qi</id>
+    <content type="html"><![CDATA[<p>最近一段时间看<strong>百度百家</strong>的喷文比较多，由于经常是在移动端阅读，除了一个笨重的《百度新闻》客户端以外没有找到合适的<strong>百度百家</strong>阅读器。</p>
+
+<p>本来想自己做一个，实在是懒得动手，最后决定搞个百度百家的RSS Generator算了……</p>
+
+<p>这个玩意儿基于百度新闻移动端使用的API获取数据，由于百度图床防盗链的机制，偶尔可能会出现图片显示不正常的情况……</p>
+
+<p>目前部署在SAE上，提供了百度百家在移动端的六个分类的RSS接口，各自的url如下：</p>
+
+<ul>
+  <li>
+    <p>百家热点：<a href="http://1.baijiarss.sinaapp.com/subscribe?sid=611">点我</a></p>
+  </li>
+  <li>
+    <p>百家互联网：<a href="http://1.baijiarss.sinaapp.com/subscribe?sid=612">点我</a></p>
+  </li>
+  <li>
+    <p>百家文化：<a href="http://1.baijiarss.sinaapp.com/subscribe?sid=613">点我</a></p>
+  </li>
+  <li>
+    <p>百家娱乐：<a href="http://1.baijiarss.sinaapp.com/subscribe?sid=614">点我</a></p>
+  </li>
+  <li>
+    <p>百家体育：<a href="http://1.baijiarss.sinaapp.com/subscribe?sid=615">点我</a></p>
+  </li>
+  <li>
+    <p>百家财经：<a href="http://1.baijiarss.sinaapp.com/subscribe?sid=616">点我</a></p>
+  </li>
+</ul>
+
+<p>也可以直接去<a href="http://1.baijiarss.sinaapp.com">http://1.baijiarss.sinaapp.com</a>看目前支持的分类频道，后续如果有增加会在这里加上(HTML苦手写的页面凑合看吧……)</p>
+
+<p><img src="http://attaches-mirror.qiniudn.com/images/attaches/1dfd8219dc3971bb6d163b1818fb7755.png" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[全新环境下拉取octopress源码重新generate后部署到github时git push报错的解决方法]]></title>
