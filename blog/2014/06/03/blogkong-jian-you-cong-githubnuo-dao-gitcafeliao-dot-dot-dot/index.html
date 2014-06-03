@@ -1,0 +1,189 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>blog空间又从github挪到gitcafe了…… - I'm Viecks</title>
+	<meta name="author" content="viecks">
+
+	
+	<meta name="description" content="聊天时候同组的一个汉子介绍说Gitcafe也提供了类似Github Pages的功能，同时访问速度还秒出Github几条街，心动了…… 去Gitcafe官网看了一下，速度确实比Github快的多（毕竟更多的面向国内用户），开源项目有512M的空间可用，同时也有Gitcafe Pages功能， &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="I'm Viecks" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="/javascripts/libs/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">I'm Viecks</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:viecks.info">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="https://www.google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:viecks.info">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Blog空间又从github挪到gitcafe了……</h2>
+	<div class="entry-content"><p>聊天时候同组的一个汉子介绍说Gitcafe也提供了类似Github Pages的功能，同时访问速度还秒出Github几条街，心动了……</p>
+
+<p>去Gitcafe官网看了一下，速度确实比Github快的多（毕竟更多的面向国内用户），开源项目有512M的空间可用，同时也有Gitcafe Pages功能，设定独立域名也比Github要省心，不用费劲写啥CNAME文件，直接A过去就好，所以一心动，就迁移过去了……</p>
+
+<!--more-->
+
+<h3 id="gitcafe">第一步：去Gitcafe注册一个账号：</h3>
+
+<p>此处略过500字……</p>
+
+<h3 id="gitcafe-1">第二部：在Gitcafe上创建一个和注册账号同名的项目：</h3>
+
+<p>参见下图：
+<img src="/image/attaches/ef3f6e120cb81a23774dbff42702b465.png" alt="" /></p>
+
+<h3 id="octopressbloggitcafe">第三步：配置octopress提交生成的blog文件到Gitcafe：</h3>
+
+<p>在Rakefile中增加以下代码（搜索“Github Pages deploy complete”，插入在其下面）：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+</pre></td><td class="code"><pre><code class="ruby"><span class="line"><span class="nb">system</span> <span class="s2">&quot;git remote add gitcafe git@gitcafe.com:viecks/viecks.git &gt;&gt; /dev/null 2&gt;&amp;1&quot;</span>
+</span><span class="line"><span class="nb">system</span> <span class="s2">&quot;git push -u gitcafe master:gitcafe-pages</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>这步完成后，就可以输入viecks.gitcafe.com看下blog是否已经可以正常展示了。</p>
+
+<h3 id="section">第四步：自定义域名：</h3>
+
+<p>不细说了，直接看图：</p>
+
+<p><img src="/image/attaches/33cbe26e9fce06680238ec804098a2b5.png" alt="" /></p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-03T15:18:25+08:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2014</time></div>
+	<div class="tags">
+
+</div>
+	
+	
+        <div class="comments"><a href="#comments">Comments</a></div>
+        
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+
+<section>
+    <h2 class="title">Comments</h2>
+    <div id="comments" aria-live="polite"><!-- Duoshuo Comment BEGIN -->
+    <div class="ds-thread"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"viecks"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- Duoshuo Comment END -->
+</div>
+</section>
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    viecks
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
