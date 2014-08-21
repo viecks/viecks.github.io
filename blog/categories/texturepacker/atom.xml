@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: TexturePacker | I'm Viecks]]></title>
+  <link href="http://viecks.info/blog/categories/texturepacker/atom.xml" rel="self"/>
+  <link href="http://viecks.info/"/>
+  <updated>2014-08-21T11:34:27+08:00</updated>
+  <id>http://viecks.info/</id>
+  <author>
+    <name><![CDATA[viecks]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[TexturePacker 3.4.0 Mac 破解版]]></title>
+    <link href="http://viecks.info/blog/2014/08/21/texturepacker-3-dot-4-0-mac-po-jie-ban/"/>
+    <updated>2014-08-21T11:22:07+08:00</updated>
+    <id>http://viecks.info/blog/2014/08/21/texturepacker-3-dot-4-0-mac-po-jie-ban</id>
+    <content type="html"><![CDATA[<p>从来没有做过游戏开发的我最近迷上cocos2d-x了，一发不可收拾……这就是真爱……童年的梦又燃了……</p>
+
+<p>听人说TexturePacker挺好，从官网下了一个试了试，确实不错，不过只能全功能试用7天，我这样的纯屌又没钱……</p>
+
+<p>去网上搜了半天，貌似最新3.4.0 Mac版的破解还没有，自己动手给破了，有需要的<a href="/attaches/TexturePacker-3.4.0-uni-patched-by-viecks.dmg">拿走</a>吧……</p>
+]]></content>
+  </entry>
+  
+</feed>
