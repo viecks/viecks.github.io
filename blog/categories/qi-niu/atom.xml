@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 七牛 | I'm Viecks]]></title>
-  <link href="http://viecks.info/blog/categories/qi-niu/atom.xml" rel="self"/>
-  <link href="http://viecks.info/"/>
-  <updated>2014-08-21T11:34:27+08:00</updated>
-  <id>http://viecks.info/</id>
+  <link href="http://blog.viecks.info/blog/categories/qi-niu/atom.xml" rel="self"/>
+  <link href="http://blog.viecks.info/"/>
+  <updated>2014-12-05T13:09:14+08:00</updated>
+  <id>http://blog.viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用七牛为托管在github上面的静态博客加速]]></title>
-    <link href="http://viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su/"/>
+    <link href="http://blog.viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su/"/>
     <updated>2014-05-13T19:01:05+08:00</updated>
-    <id>http://viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su</id>
+    <id>http://blog.viecks.info/blog/2014/05/13/shi-yong-qi-niu-wei-tuo-guan-zai-githubshang-mian-de-jing-tai-bo-ke-jia-su</id>
     <content type="html"><![CDATA[<p>今天折腾了一下，把Blog的存储空间从七牛挪到github了。折腾的原因主要是七牛使用自定义域名太糟心了，各种备案各种麻烦。</p>
 
 <p>迁移的过程很简单，在七牛托管时候用qrsync做deploy，切换到github以后直接用rake deploy搞定。</p>

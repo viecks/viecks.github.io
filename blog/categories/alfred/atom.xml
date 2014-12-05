@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Alfred | I'm Viecks]]></title>
-  <link href="http://viecks.info/blog/categories/alfred/atom.xml" rel="self"/>
-  <link href="http://viecks.info/"/>
-  <updated>2014-08-21T11:34:27+08:00</updated>
-  <id>http://viecks.info/</id>
+  <link href="http://blog.viecks.info/blog/categories/alfred/atom.xml" rel="self"/>
+  <link href="http://blog.viecks.info/"/>
+  <updated>2014-12-05T13:09:14+08:00</updated>
+  <id>http://blog.viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[简化静态博客发图的Alfred工作流]]></title>
-    <link href="http://viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu/"/>
+    <link href="http://blog.viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu/"/>
     <updated>2014-05-13T19:16:40+08:00</updated>
-    <id>http://viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu</id>
+    <id>http://blog.viecks.info/blog/2014/05/13/jian-hua-jing-tai-bo-ke-fa-tu-de-alfredgong-zuo-liu</id>
     <content type="html"><![CDATA[<p>今天把自己的blog迁到了github上，为了解决图片加载慢的问题又用了qiniudn做图床加速。没想到用力太猛，贴图比之前更麻烦了。。。没办法，用Alfred写了个Workflow，一劳永逸的解决贴图的问题吧……</p>
 
 <!--more-->
@@ -124,9 +124,9 @@ return "" end if ```
   
   <entry>
     <title type="html"><![CDATA[暴力破解Alfred 2.3的Powerpack]]></title>
-    <link href="http://viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/"/>
+    <link href="http://blog.viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack/"/>
     <updated>2014-05-13T12:45:39+08:00</updated>
-    <id>http://viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack</id>
+    <id>http://blog.viecks.info/blog/2014/05/13/bao-li-po-jie-alfred-2-dot-3de-powerpack</id>
     <content type="html"><![CDATA[<p><strong style="color: red">免责声明：本文所述仅限于学习和研究之目的，请勿用于任何商业用途。是否使用本文所述技术取决与您，由此造成的一切后果本人不承担任何责任。</strong></p>
 
 <p>今天收到了Alfred 2.3版本的AutoUpdate提醒。更新以后发现之前网上搜到的用于Alfred 2.x版本的破解补丁无法破解2.3版本了。没有办法，只能自己动手丰衣足食了……</p>

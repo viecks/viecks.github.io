@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Patterns | I'm Viecks]]></title>
+  <link href="http://blog.viecks.info/blog/categories/patterns/atom.xml" rel="self"/>
+  <link href="http://blog.viecks.info/"/>
+  <updated>2014-12-05T13:09:14+08:00</updated>
+  <id>http://blog.viecks.info/</id>
+  <author>
+    <name><![CDATA[viecks]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[AndroidDesignPatterns翻译开坑……]]></title>
+    <link href="http://blog.viecks.info/blog/2014/12/05/androiddesignpatternsfan-yi-kai-keng-dot-dot-dot/"/>
+    <updated>2014-12-05T13:01:32+08:00</updated>
+    <id>http://blog.viecks.info/blog/2014/12/05/androiddesignpatternsfan-yi-kai-keng-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>立贴存证！</p>
+]]></content>
+  </entry>
+  
+</feed>

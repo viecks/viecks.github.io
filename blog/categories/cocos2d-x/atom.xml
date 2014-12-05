@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: cocos2d-x | I'm Viecks]]></title>
-  <link href="http://viecks.info/blog/categories/cocos2d-x/atom.xml" rel="self"/>
-  <link href="http://viecks.info/"/>
-  <updated>2014-08-21T11:34:27+08:00</updated>
-  <id>http://viecks.info/</id>
+  <link href="http://blog.viecks.info/blog/categories/cocos2d-x/atom.xml" rel="self"/>
+  <link href="http://blog.viecks.info/"/>
+  <updated>2014-12-05T13:09:14+08:00</updated>
+  <id>http://blog.viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[TexturePacker 3.4.0 Mac 破解版]]></title>
-    <link href="http://viecks.info/blog/2014/08/21/texturepacker-3-dot-4-0-mac-po-jie-ban/"/>
+    <link href="http://blog.viecks.info/blog/2014/08/21/texturepacker-3-dot-4-0-mac-po-jie-ban/"/>
     <updated>2014-08-21T11:22:07+08:00</updated>
-    <id>http://viecks.info/blog/2014/08/21/texturepacker-3-dot-4-0-mac-po-jie-ban</id>
+    <id>http://blog.viecks.info/blog/2014/08/21/texturepacker-3-dot-4-0-mac-po-jie-ban</id>
     <content type="html"><![CDATA[<p>从来没有做过游戏开发的我最近迷上cocos2d-x了，一发不可收拾……这就是真爱……童年的梦又燃了……</p>
 
 <p>听人说TexturePacker挺好，从官网下了一个试了试，确实不错，不过只能全功能试用7天，我这样的纯屌又没钱……</p>

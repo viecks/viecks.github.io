@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: rss | I'm Viecks]]></title>
-  <link href="http://viecks.info/blog/categories/rss/atom.xml" rel="self"/>
-  <link href="http://viecks.info/"/>
-  <updated>2014-08-21T11:34:27+08:00</updated>
-  <id>http://viecks.info/</id>
+  <link href="http://blog.viecks.info/blog/categories/rss/atom.xml" rel="self"/>
+  <link href="http://blog.viecks.info/"/>
+  <updated>2014-12-05T13:09:14+08:00</updated>
+  <id>http://blog.viecks.info/</id>
   <author>
     <name><![CDATA[viecks]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[一个百度百家的RSS生成器]]></title>
-    <link href="http://viecks.info/blog/2014/05/26/%5B%3F%5D-ge-bai-du-bai-jia-de-rsssheng-cheng-qi/"/>
+    <link href="http://blog.viecks.info/blog/2014/05/26/%5B%3F%5D-ge-bai-du-bai-jia-de-rsssheng-cheng-qi/"/>
     <updated>2014-05-26T19:13:58+08:00</updated>
-    <id>http://viecks.info/blog/2014/05/26/[?]-ge-bai-du-bai-jia-de-rsssheng-cheng-qi</id>
+    <id>http://blog.viecks.info/blog/2014/05/26/[?]-ge-bai-du-bai-jia-de-rsssheng-cheng-qi</id>
     <content type="html"><![CDATA[<p>最近一段时间看<strong>百度百家</strong>的喷文比较多，由于经常是在移动端阅读，除了一个笨重的《百度新闻》客户端以外没有找到合适的<strong>百度百家</strong>阅读器。</p>
 
 <p>本来想自己做一个，实在是懒得动手，最后决定搞个百度百家的RSS Generator算了……</p>
